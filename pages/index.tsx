@@ -2,6 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import '../services/firebase'
+import Image from 'next/image'
+import logo from '/assets/logo.svg'
+import googleIcon from '/assets/google-icon.svg'
 
 const Home: NextPage = () => {
   return (
@@ -12,8 +15,28 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <aside>
+        <Image
+          src="https://via.placeholder.com/200/0000FF/808080 "
+          alt="image"
+          width={200}
+          height={200}
+        />
+
+        <h1>Every question has an answer</h1>
+        <h3>learn and share knowledge with every one</h3>
+      </aside>
       <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to askCanada</h1>
+        <Image src={logo} alt="logo" />
+        <button>
+          <Image src={googleIcon} alt="askCanada" />
+          Create a room with Google
+        </button>
+        <div>or</div>
+        <form>
+          <input type="text" placeholder="Type the rooom code" />
+          <button type="submit">Enter</button>
+        </form>
       </main>
 
       <footer className={styles.footer}>footer</footer>
