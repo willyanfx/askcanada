@@ -17,7 +17,7 @@ const Button = ({
   ...props
 }: ButtonProps): JSX.Element => {
   return (
-    <button {...props} disabled={isDisabled}>
+    <button {...props} onClick={onClick} disabled={isDisabled}>
       {children}
     </button>
   )

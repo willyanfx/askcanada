@@ -5,6 +5,7 @@ import '../services/firebase'
 import Image from 'next/image'
 import logo from '/assets/logo.svg'
 import googleIcon from '/assets/google-icon.svg'
+import { CopyButton } from '../components/copyButton'
 
 const Home: NextPage = () => {
   return (
@@ -39,7 +40,9 @@ const Home: NextPage = () => {
         </form>
       </main>
 
-      <footer className={styles.footer}>footer</footer>
+      <footer className={styles.footer}>
+        <CopyButton text="#343434" />
+      </footer>
     </div>
   )
 }

@@ -8,15 +8,16 @@ interface CopyButtonProps {
 
 const CopyButton = ({ text }: CopyButtonProps) => {
   const handleCopy = () => {
+    console.log('test')
     navigator.clipboard.writeText(text)
   }
 
   return (
     <div>
-      <Button onClick={handleCopy} hasIconOnly type="button">
+      <Button onClick={handleCopy} type="button">
         <Image src={copy} width={16} height={16} alt="copy" />
       </Button>
-      <input type="text" value={text} />
+      <span>{text}</span>
     </div>
   )
 }
