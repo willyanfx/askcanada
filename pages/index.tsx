@@ -24,7 +24,7 @@ const Home: NextPage = () => {
           height={200}
         />
 
-        <h1>Every question has an answer</h1>
+        <h1 className="text-3xl font-bold">Every question has an answer</h1>
         <h3>learn and share knowledge with every one</h3>
       </aside>
       <main className={styles.main}>
